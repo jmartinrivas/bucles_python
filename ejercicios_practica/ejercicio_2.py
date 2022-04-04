@@ -16,6 +16,9 @@ colores = ['rojo', 'naranja', 'verde', 'azul']
 # Itere el "for" utilizando la lista como parámero
 # y utilizar como elemento del "for" cada color
 # for color ...
+for i in range(len(colores)):
+    color=colores[i]
+    print("color ingresado:",color)
 
 # Itere el "for" utilizando el tamaño de la lista
 # como parámetro y utilizar el índice para acceder a

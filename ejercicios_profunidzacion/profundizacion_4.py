@@ -50,6 +50,19 @@ temperatura_promedio = 0    # Al finalizar el loop deberá aquí alamcenar el pr
 temperatura_len = 0         # Aquí debe almacenar cuantas temperatuas hay en la lista
 
 # Colocar el bucle aqui......
+for temp in temp_dataloger:
+    temperatura_sumatoria += temp
+    temperatura_len +=1
+    if (temperatura_max is None) or (temp > temperatura_max):
+        temperatura_max = temp
+    if (temperatura_min is None) or (temp < temperatura_min):
+        temperatura_min = temp
+print("La temperatura maxima calculada es de:", temperatura_max)
+print("la temperatura maxima por formula es de:",max(temp_dataloger))
+
+print("La temperatura minima calculada es de:", temperatura_min)
+print("la temperatura minima por formula es de:",min(temp_dataloger))
+
 
 # Al finalizar el bucle compare si el valor que usted calculó para
 # temperatura_max y temperatura_min coincide con el que podría calcular
@@ -59,10 +72,25 @@ temperatura_len = 0         # Aquí debe almacenar cuantas temperatuas hay en la
 
 # Al finalizar el bucle debe calcular el promedio como:
 # temperatura_promedio = temperatura_sumatoria / cantidad_temperatuas
+temperatura_promedio = temperatura_sumatoria / temperatura_len
 
+print("La sumatoria de las temperaturas calculada es de:", round((temperatura_sumatoria),2))
+print("La sumatoria de las temperaturas por función es de:", round(sum(temp_dataloger),2))
+
+print("El total de temperaturas ingresadas fue de:",temperatura_len)
+print("La tempeartura promedio fue de:", round((temperatura_promedio),2))
 # Corroboren los resultados de temperatura_sumatoria
 # usando la función "sum"
 # función "sum" --> https://www.w3schools.com/python/ref_func_sum.asp
+
+if (temperatura_min <= 8) and (temperatura_max <= 14):
+    print("La epoca del año en la que nos encontramos es: Invierno")
+elif (temperatura_min <= 10) and (temperatura_max <= 24):
+    print("La epoca del año en la que nos encontramos es: Primavera")
+elif (temperatura_min <= 11) and (temperatura_max <= 20):
+    print("La epoca del año en la que nos encontramos es: Otoño")
+elif (temperatura_min <= 19) and (temperatura_max <= 28):
+    print("La epoca del año en la que nos encontramos es: Verano")
 
 '''
 Una vez que tengamos nuestros valores correctamente calculados debemos

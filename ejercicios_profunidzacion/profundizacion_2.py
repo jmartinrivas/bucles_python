@@ -35,3 +35,31 @@ alguno de lo soportados o no es la palabra "FIN".
 
 print("Mi Calculadora (^_^)")
 # Empezar aquí la resolución del ejercicio
+while True:
+    try:
+        numero_1 = int(input("Escribe el primer numero: "))
+        numero_2 = int(input("Escribe el segundo numero: "))
+        operación = input("Ingrese la oeración que desea realizar:\n Suma(+)\n Resta(-)\n Multipicación(*)\n Exponente o Potencia (**)")
+    except ValueError:
+        print("El valor ingresado es incorrecto, por favor vuelva a intentarlo")
+        continue
+    if operación.lower() == "fin":
+        break
+    elif operación == "+":
+        suma=numero_1+numero_2
+        print ("La operacion seleccionada es suma entre:",numero_1,"y",numero_2, "y el resultado es:",suma)
+    elif operación == "-":
+        resta=numero_1-numero_2
+        print ("La operacion seleccionada es resta entre:",numero_1,"y",numero_2, "y el resultado es:",resta)
+    elif operación == "*":
+        multiplicacion=numero_1*numero_2
+        print ("La operacion seleccionada es multiplicacion entre:",numero_1,"y",numero_2, "y el resultado es:",multiplicacion)
+    elif operación == "/":
+        division=numero_1/numero_2
+        print ("La operacion seleccionada es division entre:",numero_1,"y",numero_2, "y el resultado es:",division)
+    elif operación == "**":
+        potencia=numero_1**numero_2
+        print ("La operacion seleccionada es potencia entre:",numero_1,"y",numero_2, "y el resultado es:",potencia)
+    else:
+        print("La opcion ingresada es incorrecta, por favor vuelva a seleccionar la operacion deseada:")
+print("Fin del Programa")
