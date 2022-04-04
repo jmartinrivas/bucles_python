@@ -83,13 +83,13 @@ print("La tempeartura promedio fue de:", round((temperatura_promedio),2))
 # usando la función "sum"
 # función "sum" --> https://www.w3schools.com/python/ref_func_sum.asp
 
-if (temperatura_min <= 8) and (temperatura_max <= 14):
+if (temperatura_min >= 8) and (temperatura_max <= 14):
     print("La epoca del año en la que nos encontramos es: Invierno")
-elif (temperatura_min <= 10) and (temperatura_max <= 24):
+elif (temperatura_min >= 10) and (temperatura_max <= 24):
     print("La epoca del año en la que nos encontramos es: Primavera")
-elif (temperatura_min <= 11) and (temperatura_max <= 20):
+elif (temperatura_min >= 11) and (temperatura_max <= 20):
     print("La epoca del año en la que nos encontramos es: Otoño")
-elif (temperatura_min <= 19) and (temperatura_max <= 28):
+elif (temperatura_min >= 19) and (temperatura_max <= 28):
     print("La epoca del año en la que nos encontramos es: Verano")
 
 '''
